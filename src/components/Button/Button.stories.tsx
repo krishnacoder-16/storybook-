@@ -9,6 +9,15 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
+  argTypes: {
+    primary: { control: 'boolean', description: 'Toggle between primary and secondary styles' },
+    disabled: { control: 'boolean', description: 'Toggle disabled state' },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
+    },
+    backgroundColor: { control: 'color' },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -23,7 +32,16 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
+    primary: false,
     label: 'Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    primary: true,
+    disabled: true,
+    label: 'Button (Disabled)',
   },
 };
 
