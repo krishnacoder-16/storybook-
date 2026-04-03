@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# UI Library – Storybook Design System
 
-## Getting Started
+A modern Component-Driven UI Library built using React/Next.js and Storybook.
+This project demonstrates how scalable frontend systems are built in real-world companies by developing reusable components in isolation.
 
-First, run the development server:
+## 🚀 Features
+**✅ Level 1 – Component Development (Core Requirement)**
+- Storybook setup integrated into Next.js project
+- Components built and tested in isolation
+- Created reusable UI components:
+  - Button
+  - Input Field
+  - Product Card
+- Independent Storybook UI dashboard (runs without main app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+**✅ Level 2 – Component Variants & Controls**
+- Dynamic props (args) configured in Storybook
+- Interactive control panel for live component changes
+- Button supports:
+  - Primary
+  - Secondary
+  - Disabled states
+- Improved component reusability and flexibility
+
+**✅ Level 3 – Deployment & Design System**
+- Storybook built as a static application
+- Deployed as a standalone design system
+- Accessible via live URL
+- Enables team collaboration and UI review without running main app
+
+## 🧠 Key Design Decisions
+- **Component-Driven Development:** Built components independently before integrating into UI
+- **Separation of Concerns:** Components are isolated from application logic
+- **Reusable Architecture:** Components designed with props for scalability
+- **Storybook as Source of Truth:** Acts as a visual documentation system
+- **Design Consistency:** Ensures UI uniformity across the application
+
+## 📂 Project Structure
+```text
+your-project/
+│
+├── .storybook/                 # Storybook configuration
+│   ├── main.ts
+│   └── preview.tsx             # Modified as TSX to support internal React context hooks
+│
+├── src/
+│   ├── components/
+│   │   ├── Button/
+│   │   │   ├── Button.tsx
+│   │   │   └── Button.stories.tsx
+│   │   │
+│   │   ├── Input/
+│   │   │   ├── Input.tsx
+│   │   │   └── Input.stories.tsx
+│   │   │
+│   │   ├── ProductCard/
+│   │   │   ├── ProductCard.tsx
+│   │   │   └── ProductCard.stories.tsx
+│
+├── public/
+├── package.json
+├── README.md
+├── prompts.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Technologies Used
+- **Framework:** Next.js / React
+- **Component Dev Tool:** Storybook
+- **Styling:** Tailwind CSS
+- **Language:** TypeScript
+- **Deployment:** Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 How to Run Locally
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1️⃣ **Clone the repository:**
+```bash
+git clone <your-repo-url>
+cd your-project
+```
 
-## Learn More
+2️⃣ **Install dependencies:**
+```bash
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+3️⃣ **Run Storybook:**
+```bash
+npm run storybook
+```
+👉 **Storybook runs at:** http://localhost:6006
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Storybook is deployed as a static site:
+```bash
+npm run build-storybook
+```
 
-## Deploy on Vercel
+Then deployed using Vercel with:
+- **Build Command:** `npm run build-storybook`
+- **Output Directory:** `storybook-static`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🌐 Live Design System
+[https://vercel.com/krishnakohli2004-1655s-projects/storybook](https://vercel.com/krishnakohli2004-1655s-projects/storybook)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤖 AI Assistance Disclaimer
+AI tools were used for:
+- Understanding Storybook setup and configuration
+- Debugging build and dependency issues
+- Structuring reusable components
+- Improving project architecture and documentation
+
+All implementation decisions were tested, modified, and understood manually.
+Detailed prompt usage is documented in `prompts.md`.
+
+---
+**👨‍💻 Author**
+
+**Krishna Kumar**
+*Frontend Developer Intern – Prodesk*
